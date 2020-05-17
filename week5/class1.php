@@ -12,7 +12,7 @@ echo "<p style='color: red'>Hello World</p>";
 https://github.com/mylesfoster1989/HTCS56062s12020php.git
 
 $i = 0; //set counter
-while ($i <100){ //set condition
+while ($i <10){ //set condition
     echo "<p>hello</p>" ; //do something if condition is true
     $i = $i + 1; //update counter
 
