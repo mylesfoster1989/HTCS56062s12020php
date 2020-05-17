@@ -6,4 +6,4 @@ echo "<h1>hello world</h1>";
 
 echo "<p>hello world</p>";
 
-echo "<p style='colour: red'>Hello World</p>";
+echo "<p style='color: red'>Hello World</p>";
