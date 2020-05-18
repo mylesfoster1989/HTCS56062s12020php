@@ -10,15 +10,15 @@ echo "<h1>" . $grating . " " . $who . "</h1>";  //dont mean merge in php
 
 $x = 4;
 $y = 5;
-echo "x = ".$x;
+echo "<p1>". "x = ".$x. "<p1>";
 echo "y = ".$y;
 echo "z = x + y = ".($x + $y);
 
 $grating = "Hello world"
 //lines of string
-echo "<br>".strlen($grating) "string length </br>"; //stringlength
+echo "<br>".strlen($grating). "string length </br>"; //stringlength
 //word count -- count numbers of word in the string
-echo str_word_count($grating)."string word count<br>"
+echo str_word_count($grating)."string word count<br>";
     //string reverse
 echo strrev($grating). "string reverse<br>";
 //string position
