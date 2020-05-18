@@ -1,7 +1,7 @@
 <?php
 
 $grating = "hello"; //$this is syntex variable
-$who = "lei";
+$who = "myles";
 
 echo $grating;
 echo  $who;
