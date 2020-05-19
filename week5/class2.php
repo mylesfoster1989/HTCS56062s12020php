@@ -11,7 +11,7 @@ echo "<h1>" . $grating . " " . $who . "</h1>";  //dont mean merge in php
 $x = 4;
 $y = 5;
 echo "<p1>". "x = ".$x. "<p1>";
-echo "<p2>". "y = ".$y "<p2>";
+echo "<p2>". "y = ".$y. "<p2>";
 echo "z = x + y = ".($x + $y);
 
 $grating = "Hello world";
