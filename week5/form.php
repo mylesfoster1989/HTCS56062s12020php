@@ -1,7 +1,7 @@
 <?php
 ?>
 
-<form action="formresult.php" method"post">
+<form action="https://www.unitec.co.nz" method"post">
 <p>
     mark: <input type="number" name="mark"
 <p>Grade: <span id = "showGrade"></span></p>
