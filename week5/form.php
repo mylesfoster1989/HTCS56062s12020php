@@ -7,7 +7,7 @@ method in form is your request method, name inside input box is you request data
 <!--post allows encrypt -->
 <!--get no way to encrypt-->
 <p>
-    mark: <input type="number" name="mark"
+    mark: <input type="number" name="mark">
 </p>
 <p>
     <input type="submit" value="show">

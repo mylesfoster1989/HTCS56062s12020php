@@ -6,6 +6,7 @@ if ($res > 100 || $res <0) { //condition
 }elseif($res > 90){
     echo "A";
 
+
 }elseif($res > 80){
     echo "b";
 
