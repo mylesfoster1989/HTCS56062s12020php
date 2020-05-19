@@ -25,7 +25,7 @@ echo strrev($grating). "string reverse<br>";
 echo strpos($grating, "Hello")."word position<br>";
 //string replace
 echo str_replace($grating,"Hello","byebye")."
-word replace<br>";
+cz<br>";
 //to uppercase
 echo strtoupper($grating)."To Upper Case <br>";
 //to lower
