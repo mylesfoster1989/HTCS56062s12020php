@@ -10,6 +10,6 @@ method in form is your request method, name inside input box is you request data
     mark: <input type="number" name="mark"
 </p>
 <p>
-    <input type="submit" value="show>
+    <input type="submit" value="show">
 </p>
 </form>
