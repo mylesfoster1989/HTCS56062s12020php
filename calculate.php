@@ -1,12 +1,11 @@
 <?php
-if (isset($_POST["width"])){ //checks post data
+if (isset($_POST["width"])) { //checks post data
     $w = $_POST["width"];
-$h = $_POST["height"];
-$area = $w * $h;
-echo "Area: ".$area;
+    $h = $_POST["height"];
+    $area = $w * $h;
+    echo "Area: " . $area;
 
 
-
-}else{
+} else {
     echo "go back to form page";
 }
