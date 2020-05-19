@@ -8,7 +8,7 @@ $t1 = date("H.i.s");
 echo $t. " ".$t1;
 
 $hour = intval(date("H"));
-$minutes = intval(date("1"));
+$minutes = intval(date("i"));
 echo "<p>h: ".$hour."</p>";
 echo "<p>m: ".$minutes."</p>";
 
