@@ -1,5 +1,9 @@
 <?php
 $res = $_POST["mark"];
-if ($res > 50){
+if ($res > 50){ //condition
     echo "pass";
-}else
+
+}else {
+        pass = "no";
+    }
+}
