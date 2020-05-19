@@ -12,15 +12,13 @@ $minutes = intval(date("1"));
 echo "<p>h: ".$hour."</p>";
 echo "<p>m: ".$minutes."</p>";
 
-if($hour>=10 && $minutes <=20) {  //&&means and || means or
-    //work before 10:20
+if($hour>=12 && $minutes <=55) {  //&&means and || means or
+    //work before 1pm
     echo "have a good morning";
 }elseif ($hour<20) {
     //work before 2100
     echo "have a good day";
-}else {
-    echo "have a good night";
-}
+
 }else {
     //work after 2100 to 1020
     echo "have a good night";
