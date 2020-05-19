@@ -20,7 +20,8 @@ if($hour>=10 && $minutes <=20) {  //&&means and || means or
     echo "have a good day";
 }else {
     echo "have a good night";
-}else{
+}
+}else {
     //work after 2100 to 1020
     echo "have a good night";
 }
