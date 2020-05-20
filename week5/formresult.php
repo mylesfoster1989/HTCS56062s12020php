@@ -8,12 +8,12 @@ if ($res > 100 || $res <0) { //condition
 
 
 }elseif($res > 80){
-    echo "b";
+    echo "B";
 
 }elseif($res > 50){
-    echo "c";
+    echo "C";
 
 }elseif($res > 50){
-    echo "d";
+    echo "D";
 
 }
