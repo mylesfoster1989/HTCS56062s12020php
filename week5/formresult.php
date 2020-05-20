@@ -1,5 +1,5 @@
 <?php
-$res = $_POST["mark"];
+$res = $_POST["mark"]; //can do get instead of post
 if ($res > 100 || $res <0) { //condition
     echo "wrong input";
 
