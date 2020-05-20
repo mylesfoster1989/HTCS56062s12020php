@@ -13,7 +13,7 @@ if ($res > 100 || $res <0) { //condition
 }elseif($res > 50){
     echo "C";
 
-}elseif($res > 50){
+}elseif($res > 0){
     echo "D";
 
 }
