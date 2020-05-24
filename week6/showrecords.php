@@ -6,7 +6,7 @@ $database ="bhdh4cks7ou9mirv";
 
 $conn = new mysqli($server,$user,$pwd,$database);
 if ($conn->connect_error){
-    echo $conn->connection_error;
+    echo $conn->connect_error;
 }else{
     echo "Connection Created";
 }
