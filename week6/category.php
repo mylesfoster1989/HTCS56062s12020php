@@ -23,7 +23,7 @@
         echo "Connection Created ok";
     }
 
-    $sql = "select * from Products";
+    $sql = "select * from category";
     $result = $conn->query ($sql); //run the query on this connection
 
     if ($result->num_rows > 0) {
