@@ -7,10 +7,11 @@
 <body>
 <table>
     <tr>
-        <th>ID</th>
-        <th>Username</th>
-        <th>Password</th>
+        <th>iD</th>
         <th>Name</th>
+        <th>Image name</th>
+        <th>price</th>
+        <th>category ID</th>
     </tr>
     <?php
     $server =  "arfo8ynm6olw6vpn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
