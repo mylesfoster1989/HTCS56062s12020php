@@ -27,7 +27,7 @@ if (isset($_POST["username"])) {
     $result = $conn->query($sql); //from query on this connection through method query()
     if ($result->num_rows == 1) { //means user exist in our database
         while ($row = $result->fetch_assoc()) {
-            if ($row["$password"] == $password) { //check password
+            if ($row["password"] == $password) { //check password
                 echo "access granted";
             } else {
                 echo "wrong password";
