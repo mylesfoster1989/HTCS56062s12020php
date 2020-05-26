@@ -29,6 +29,11 @@ if (isset($_POST["username"])) {
         while ($row = $result->fetch_assoc()) {
             if ($row["password"] == $password) { //check password
                 echo "access granted";
+                //if login, we allow user to do something
+                ?>
+                <p><a href="profile.php">profile</a></p>
+                <p><a href="changepassword.php">change passsword</a></p>
+                <?php
             } else {
                 echo "wrong password";
             }
@@ -36,12 +41,13 @@ if (isset($_POST["username"])) {
     } else {
         echo "wrong username";
     }
+    $conn->close(); //close my connection
 
 
 } else {
     ?>
     <script>
-        window.open("lgoinform.html"); // go to log in form
+        window.open("lgoinform.html","-self"); // go to log in form
     </script>
     <?php
 }
