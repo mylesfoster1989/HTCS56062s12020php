@@ -11,7 +11,10 @@ if ($conn->connect_error){
     echo "Connection Created";
 }
 
-$sql = "select * from Users where username= 'something'";
+session_start();
+$username = $_SESSION["username"];
+
+$sql = "select * from Users where username= '$username";
 $result = $conn->query($sql);
 if ($result->num_rows == 1){
     while ($row = $result->fetch_assoc()){

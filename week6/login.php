@@ -21,6 +21,7 @@ if (isset($_POST["username"])) {
     } else {
         echo "Connection Created";
     }
+
 //is the username in my table
     $sql = "select  * from Users where username = '$username'"; //this is 0ur query
     echo $sql ;
@@ -30,7 +31,7 @@ if (isset($_POST["username"])) {
             if ($row["password"] == $password) { //check password
                 echo "access granted";
                 session_start();
-                $_SESSION_start["username"] = $username;
+                $_SESSION["username"] = $username; //set session here
                 //if login, we allow user to do something
                 ?>
                 <p><a href="profile.php">profile</a></p>
