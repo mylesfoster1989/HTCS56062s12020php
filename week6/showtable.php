@@ -25,7 +25,7 @@
         echo "Connection Created";
     }
 
-    $sql = "select * from Users";
+    $sql = "select * from Users"; //create query
     $result = $conn->query ($sql); //run the query on this connection
 
     if ($result->num_rows > 0) {
@@ -46,5 +46,6 @@
 
 
     ?>
+</table>
 </body>
 </html>

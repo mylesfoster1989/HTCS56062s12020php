@@ -24,6 +24,5 @@ if ($result->num_rows == 1){
     }
 }
 
- }
 ?>
 <p> <a href="logout.php">logout</a></p>
