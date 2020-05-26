@@ -11,25 +11,23 @@ if ($conn->connect_error) {
     echo "Connection Created";
 }
 
-session_start(); //eitherc you u se or set session, you mst have seesssoin start compulsary
-$username = $_SESSION["username"]; //use sessoin
+session_start();  //either you use session or set session, you must have session start
+$username = $_SESSION["username"]; //use session
 
 $sql = "select password from Users where username='$username'";
-$result = $conn->query($sql);
+$result = $connection->query($sql);
 if ($result->num_rows == 1) {
     while ($row = $result->fetch_assoc()) {
         $oldPwdInDb = $row["password"];
     }
-
-
-
 }
-if (isset($_POST["oldpwd]"])) { //isset check variable exist or not
+
+if (isset($_POST["oldpwd"])) { //isset check variable exist or not
     if ($_POST["oldpwd"] == $oldPwdInDb) {
         $sql = "update Users set password = '";
         $sql .= $_POST["newpwd"];
-        $sql .= "' where username = '$username'";
-        $result = $conn->query($sql);
+        $sql .= "'where username = '$username'";
+        $result = $connection->query($sql);
         echo "password changed";
     } else {
         echo "go back, input again";
@@ -37,6 +35,5 @@ if (isset($_POST["oldpwd]"])) { //isset check variable exist or not
 
 }
 $connection->close();
-
 ?>
-<p> <a href="logout.php">logout</a></p>
+<p><a href="logout.php">Logout</a></p>
