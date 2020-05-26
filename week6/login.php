@@ -29,10 +29,12 @@ if (isset($_POST["username"])) {
         while ($row = $result->fetch_assoc()) {
             if ($row["password"] == $password) { //check password
                 echo "access granted";
+                session_start();
+                $_SESSION_start["username"] = $username;
                 //if login, we allow user to do something
                 ?>
                 <p><a href="profile.php">profile</a></p>
-                <p><a href="changepassword.php">change passsword</a></p>
+                <p><a href="changepasswordform.php">change passsword</a></p>
                 <?php
             } else {
                 echo "wrong password";
