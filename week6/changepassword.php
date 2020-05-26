@@ -31,11 +31,12 @@ if (isset($_POST["oldpwd]"])) { //isset check variable exist or not
         $sql .= "' where username = '$username'";
         $result = $conn->query($sql);
         echo "password changed";
-
     } else {
         echo "go back, input again";
     }
 
 }
+$connection->close();
+
 ?>
 <p> <a href="logout.php">logout</a></p>

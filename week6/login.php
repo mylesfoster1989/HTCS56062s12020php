@@ -16,7 +16,7 @@ if (isset($_POST["username"])) {
     $database = "bhdh4cks7ou9mirv";
 
     $conn = new mysqli($server, $user, $pwd, $database); //create database connection
-    if ($conn->connect_error) {
+    if ($conn->connect_error){
         echo $conn->connect_error;
     } else {
         echo "Connection Created";
@@ -24,7 +24,6 @@ if (isset($_POST["username"])) {
 
 //is the username in my table
     $sql = "select  * from Users where username = '$username'"; //this is 0ur query
-    echo $sql ;
     $result = $conn->query($sql); //from query on this connection through method query()
     if ($result->num_rows == 1) { //means user exist in our database
         while ($row = $result->fetch_assoc()) {
@@ -50,7 +49,7 @@ if (isset($_POST["username"])) {
 } else {
     ?>
     <script>
-        window.open("lgoinform.html","-self"); // go to log in form
+        window.open("lgoinform.html","_self"); // go to log in form
     </script>
     <?php
 }
