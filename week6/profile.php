@@ -24,3 +24,7 @@ if ($result->num_rows == 1){
         echo"<p>".$row["name"]."</p>";
     }
 }
+
+ }
+?>
+<p> <a href="logout.php">logout</a></p>

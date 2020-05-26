@@ -28,7 +28,7 @@ if (isset($_POST["oldpwd]"])) { //isset check variable exist or not
     if ($_POST["oldpwd"] == $oldPwdInDb) {
         $sql = "update Users set password = '";
         $sql .= $_POST["newpwd"];
-        $sql .= "'where username = '$username'";
+        $sql .= "' where username = '$username'";
         $result = $conn->query($sql);
         echo "password changed";
 
@@ -37,3 +37,5 @@ if (isset($_POST["oldpwd]"])) { //isset check variable exist or not
     }
 
 }
+?>
+<p> <a href="logout.php">logout</a></p>

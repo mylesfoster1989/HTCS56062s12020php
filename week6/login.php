@@ -54,3 +54,5 @@ if (isset($_POST["username"])) {
     </script>
     <?php
 }
+?>
+<p> <a href="logout.php">logout</a></p>

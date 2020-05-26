@@ -7,3 +7,5 @@
     <p>New password <input type="password" name="newpwd"></p>
     <button>change</button>
 </form>
+
+<p> <a href="logout.php">logout</a></p>
