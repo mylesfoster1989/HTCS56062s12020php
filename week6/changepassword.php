@@ -4,12 +4,13 @@ $user =  "jo0xc9likdk5o0vx";
 $pwd = "nvvui8agli8r5q6e";
 $database = "bhdh4cks7ou9mirv";
 
-$connection = new mysqli($server,$user,$pwd,$database); //create database connection
-if ($connection->connect_error){
+$connection = new mysqli($server, $user, $pwd, $database); //create database connection
+if ($connection->connect_error) {
     echo $connection->connect_error;
-}else{
+} else {
     echo "Connection Created";
 }
+
 session_start();  //either you use session or set session, you must have session start
 $username = $_SESSION["username"]; //use session
 
