@@ -1,5 +1,5 @@
 <?php
-
+include_once "databaseconnection.php";
 session_start();  //either you use session or set session, you must have session start
 $username = $_SESSION["username"]; //use session
 
@@ -10,7 +10,7 @@ if ($result->num_rows == 1) {
         $oldPwdInDb = $row["password"];
     }
 }
-include_once "databaseconnection.php";
+
 
 if (isset($_POST["oldpwd"])) { //isset check variable exist or not
     if ($_POST["oldpwd"] == $oldPwdInDb) {
