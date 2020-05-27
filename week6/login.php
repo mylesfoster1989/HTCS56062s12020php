@@ -28,18 +28,34 @@ if (isset($_POST["username"])){
 
             }else{
                 echo "wrong password";
+
+                ?>
+                <script>
+                    setTimeout(function () {
+                        window.open("loginform.php", "_self"); // go to login form
+                    }, 3000);
+
+                </script>
+                <?php
+
+
             }
         }
     } else{
         echo "wrong username";
+            ?>
+    <script>
+        setTimeout(function () {
+            window.open("loginform.html", "_self"); // go to login form
+        }, 3000);
+
+    </script>
+    <?php
+}
     }
     $connection->close(); //close my connection
 
 }else{
-    ?>
-    <script>
-        window.open("loginform.html","_self"); // go to login form
-    </script>
-    <?php
+
 }
 ?>
