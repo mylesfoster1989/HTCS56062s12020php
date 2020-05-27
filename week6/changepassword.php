@@ -4,7 +4,7 @@ $user =  "jo0xc9likdk5o0vx";
 $pwd = "nvvui8agli8r5q6e";
 $database = "bhdh4cks7ou9mirv";
 
-$conn = new mysqli($server,$user,$pwd,$database); //create database connection
+$connection = new mysqli($server,$user,$pwd,$database); //create database connection
 if ($connection->connect_error){
     echo $connection->connect_error;
 }else{
