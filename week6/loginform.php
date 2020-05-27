@@ -8,7 +8,7 @@
 <?php
 include_once "login.php";
 session_start();
-if (isset($_session["username"])){ //IF LOGIN, ELSE SHOW FORM
+if (isset($_SESSION["username"])){ //IF LOGIN, ELSE SHOW FORM
     ?>
 
     <p><a href="profile.php">profile</a></p>
