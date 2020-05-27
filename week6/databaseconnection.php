@@ -11,4 +11,3 @@ if ($connection->connect_error) {
     echo "Connection Created";
 }
 
-include_once "databaseconnection.php";
