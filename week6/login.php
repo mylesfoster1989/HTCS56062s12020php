@@ -10,25 +10,9 @@ if (isset($_POST["username"])){
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $server =  "arfo8ynm6olw6vpn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-    $user =  "jo0xc9likdk5o0vx";
-    $pwd = "nvvui8agli8r5q6e";
-    $database = "bhdh4cks7ou9mirv";
-
-    $connection = new mysqli($server, $user, $pwd, $database); //create database connection
-    if ($connection->connect_error) {
-        echo $connection->connect_error;
-    } else {
-        echo "Connection Created";
-    }
+    include_once "databaseconnection.php";
 
 
-    $connection = new mysqli($server, $user, $pwd, $database); //create database connection
-    if ($connection->connect_error){
-        echo $connection->connect_error;
-    }else{
-        echo "Connection Created";
-    }
 
     // is the username in my table
     $sql = "select * from Users where username = '$username'"; //this is our query

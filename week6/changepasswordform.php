@@ -2,6 +2,8 @@
 //whose password we change?
 ?>
 
+include_once "databaseconnection.php";
+
 <form action="changepassword.php" method="post">
     <p>Old Password: <input type="password" name="oldpwd"></p>
     <p>New Password: <input type="password" name="newpwd"></p>
