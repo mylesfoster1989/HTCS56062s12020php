@@ -26,5 +26,8 @@ if (isset($_session["username"])){ //IF LOGIN, ELSE SHOW FORM
     <p>Password: <input type="password" name="password" required></p>
     <p><button>Login</button></p> <!--Exact same to input type submit-->
 </form>
+<?php
+}
+?>
 </body>
 </html>
