@@ -5,8 +5,8 @@ $pwd = "nvvui8agli8r5q6e";
 $database = "bhdh4cks7ou9mirv";
 
 $conn = new mysqli($server, $user, $pwd, $database); //create database connection
-if ($conn->connect_error) {
-    echo $conn->connect_error;
+if ($connection->connect_error) {
+    echo $connection->connect_error;
 } else {
     echo "Connection Created";
 }

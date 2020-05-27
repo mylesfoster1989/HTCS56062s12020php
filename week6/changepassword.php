@@ -1,16 +1,15 @@
 <?php
-$server = "arfo8ynm6olw6vpn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-$user = "jo0xc9likdk5o0vx";
+$server =  "arfo8ynm6olw6vpn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$user =  "jo0xc9likdk5o0vx";
 $pwd = "nvvui8agli8r5q6e";
 $database = "bhdh4cks7ou9mirv";
 
-$conn = new mysqli($server, $user, $pwd, $database); //create database connection
-if ($conn->connect_error) {
-    echo $conn->connect_error;
-} else {
+$conn = new mysqli($server,$user,$pwd,$database); //create database connection
+if ($connection->connect_error){
+    echo $connection->connect_error;
+}else{
     echo "Connection Created";
 }
-
 session_start();  //either you use session or set session, you must have session start
 $username = $_SESSION["username"]; //use session
 

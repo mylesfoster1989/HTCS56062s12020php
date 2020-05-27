@@ -54,4 +54,3 @@ if (isset($_POST["username"])){
 }
 ?>
 <p><a href="logout.php">Logout</a></p>
-

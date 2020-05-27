@@ -1,4 +1,3 @@
-
 <?php
 //whose password we change?
 ?>
