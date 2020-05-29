@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reptile</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body onload="leftDividerAnimation(), invoice()">
+
+<div id = "header">
+        <img id ="leftDivPic" src="image/animal logo.PNG" />
+    </div>
+    <h1>
+
+        <div id="navigation1"> <!-- nav i will create my menu here-->
+            <ul> <!--use to create menu-->
+                <li><a  href="index.php">Home
+                </a></li>
+                <li><a href="Product.html">Products
+                </a></li>
+                <li><a href="Career.html">Career
+                </a></li>
+                <li><a href="aboutus.php">About Us
+                </a></li>
+            </ul>
+        </div>
+        <hr>
+    </h1>
+
+</div>
+
+
+    <div align="right">
+        <td id="rightside">
+            <p>Cart:</p>
+            <div id="cartDiv"></div>
+            <button id="showInvoiceBut">Invoice</button>
+        </td>
+
+    </div>
+
+
+<div class="product">
+    <img src="image/image/New folder (2)/reptile/rep.jpg" height="298" width="169"/>
+    <p>$3.33 ea</p>
+    <p>qty:<input class="qty" id="repQty" type="number">
+        <button class = "addBut" id="addRep" onclick="addToCart(this)" price="3.33">Add to Cart</button>
+    </p>
+</div>
+
+<div class="product">
+
+
+    <img src="image/image/New folder (2)/reptile/rep7.jpg" height="184" width="273"/>
+    <p>$1.30 ea</p>
+    <p>qty:<input class="qty" id="rep2Qty" type="number">
+        <button class = "addBut" id="addRep2" onclick="addToCart(this)" price="1.30">Add to Cart</button>
+    </p>
+</div>
+
+<div class="product">
+
+
+    <img src="image/image/New folder (2)/reptile/rep6.jpg" height="320" width="157"/>
+    <p>$2.30 ea</p>
+    <p>qty:<input class="qty" id="rep3Qty" type="number">
+        <button class = "addBut" id="addRep3" onclick="addToCart(this)" price="2.30">Add to Cart</button>
+    </p>
+</div>
+
+
+
+
+
+            <div id="navigation"> <!-- nav i will create my menu here-->
+                <ul> <!--use to create menu-->
+                    <li><a  href="Dog.html">
+
+                        <img src="image/dog.jpg"/>
+                    </a></li>
+
+                    <li><a href="Cat.html"><img src="image/cat.jpg"/>
+                    </a></li>
+                    <li><a href="Fish.html"><img src="image/fish.png"/>
+                    </a></li>
+                    <li><a href="Reptile.html"><img src="image/reptile.png"/>
+                    </a></li>
+                    <li><a href="SmallAnimal.html"><img src="image/small animals.jpg"/>
+                    </a></li>
+                    <li><a href="Chicken.html"><img src="image/chicken.png"/>
+                    </a></li>
+                    <li><a href="Bird.html"><img src="image/bird.png"/>
+                    </a></li>
+                </ul>
+
+            </div>
+
+                <!--under here
+
+       The Voice Page -->
+                <div id="voicePage" class="voice">
+
+                    <!-- Modal content -->
+                    <div id="voice-content">
+                        <span class="close">&times;</span>
+                        <p>Please check your invoice</p>
+                    </div>
+
+                </div>
+
+                <div id="footer">&copy; Animals, Unitec, NZ</div>
+
+</body>
+
+
+
+</html>
