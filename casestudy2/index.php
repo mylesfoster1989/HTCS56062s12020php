@@ -15,7 +15,7 @@ include_once "header.php";
 
 
 
-<hr>
+
 
 <div id="navigation"> <!-- nav i will create my menu here-->
     <ul> <!--use to create menu-->
