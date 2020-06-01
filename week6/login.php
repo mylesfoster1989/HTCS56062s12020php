@@ -5,53 +5,21 @@
  * Version: 1.0
  * Purpose: for login
  */
-include_once "databaseconnection.php";
 
 if (isset($_POST["username"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
+    include_once "databaseconnection.php";
 
-    // is the username in my table
-    $sql = "select * from Users where username = '$username'"; //this is our query
-    $result = $connection->query($sql); //run query on this connection through method query()
-    if ($result->num_rows == 1) { // means user exist in our database
-        while ($row = $result->fetch_assoc()) {
-            if ($row["password"] == $password) { //check password
-                echo "access granted";
-                session_start();
-                $_SESSION["username"] = $username; //set session here
-                // if login, we allow user to do something
+    if (login($username,$password)) { // if tru login}
+        session_start();
+        $_SESSION["USERNAME"] = $username;
+    }else { //login fail
+        echo "wrong user name or password";
 
-            } else {
-                echo "wrong password";
-
-                ?>
-                <script>
-                    setTimeout(function () {
-                        window.open("loginform.php", "_self"); // go to login form
-                    }, 3000);
-
-                </script>
-                <?php
-
-
-            }
-        }
-    } else {
-        echo "wrong username";
-        ?>
-        <script>
-            setTimeout(function () {
-                window.open("loginform.php", "_self"); // go to login form
-            }, 3000);
-
-        </script>
-        <?php
     }
-$connection->close(); //close my connection
 
-}else{
 
 }
 ?>
