@@ -18,10 +18,10 @@ function dbconn()
 }
 
 
-function login($username, $password){
+function login($username, $password)
+{
     // return true/false return give result bk and jump out from ths function. any code after return wont be run
     $conn = dbconn(); //c db connection fro function
-
 
 
     $sql = "select * from Users where username = '$username'"; //this is our query
@@ -36,7 +36,7 @@ function login($username, $password){
                 return false; // cnt login
             }
         }
-    } else{   //username
+    } else {   //username
         $conn->close();
         return false; //cnt login
     }

@@ -12,10 +12,10 @@ if (isset($_POST["username"])) {
 
     include_once "databaseconnection.php";
 
-    if (login($username,$password)) { // if tru login}
+    if (login($username, $password)) { // if tru login}
         session_start();
         $_SESSION["USERNAME"] = $username;
-    }else { //login fail
+    } else { //login fail
         echo "wrong user name or password";
 
     }
