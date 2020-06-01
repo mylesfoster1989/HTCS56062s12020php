@@ -5,6 +5,7 @@
 
 $a = 4;
 $b = 5;
+$c = 8;
 
 function cal(){
     echo "a = " ,$GLOBALS['a']."<br>";
