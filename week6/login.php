@@ -14,7 +14,7 @@ if (isset($_POST["username"])) {
 
     if (login($username, $password)) { // if tru login}
         session_start();
-        $_SESSION["USERNAME"] = $username;
+        $_SESSION["username"] = $username;
     } else { //login fail
         echo "wrong user name or password";
 
