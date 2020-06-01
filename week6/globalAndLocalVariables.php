@@ -26,5 +26,3 @@ echo cal1()."<br>";
 echo cal2()."<br>";
 
 
-}
-echo cal();
