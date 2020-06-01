@@ -5,6 +5,7 @@ $pwd = "nvvui8agli8r5q6e";
 $database = "bhdh4cks7ou9mirv";
 
 /**
+ * @dbconngit add
  * @return mysqli a connection
  */
 function dbconn()
@@ -18,6 +19,12 @@ function dbconn()
 }
 
 
+/**
+ * @name dbconn
+ * @param $username
+ * @param $password
+ * @return bool //login
+ */
 function login($username, $password)
 {
     // return true/false return give result bk and jump out from ths function. any code after return wont be run
@@ -42,6 +49,11 @@ function login($username, $password)
     }
 }
 
+
+/**
+ * @name showprofile
+ * @param $username
+ */
 function showProfile($username){ //this fucntion has no return
     $conn = dbconn();
     $sql = "select * from Users where username='$username'";
