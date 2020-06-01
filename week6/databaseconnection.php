@@ -75,9 +75,9 @@ function showProfile($username){ //this fucntion has no return
  * @param $username
  * @param $password
  */
-function changePassword($username, $password)
+function changePassword ($password)
 $sql = "select password from Users where username='$username'";
-$result = $connection->query($sql);
+$result = $conn->query($sql);
 if ($result->num_rows == 1) {
     while ($row = $result->fetch_assoc()) {
         $oldPwdInDb = $row["password"];
@@ -90,7 +90,7 @@ if (isset($_POST["oldpwd"])) { //isset check variable exist or not
         $sql = "update Users set password = '";
         $sql .= $_POST["newpwd"];
         $sql .= "'where username = '$username'";
-        $result = $connection->query($sql);
+        $result = $conn->query($sql);
         echo "password changed";
     } else {
         echo "go back, input again";
