@@ -70,7 +70,7 @@ function showProfile($username){ //this fucntion has no return
     }
 }
 
-function changePassword($username){
+function changePassword($username,$password){
     $conn = dbconn();
     $sql = "select password from Users where username='$username'";
     $result = $conn->query($sql);
@@ -90,6 +90,8 @@ if (isset($_POST["oldpwd"])) { //isset check variable exist or not
         echo "password changed";
     } else {
         echo "go back, input again";
+        $conn->close();
+
     }
 
 }
