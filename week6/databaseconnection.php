@@ -70,7 +70,7 @@ function showProfile($username){ //this fucntion has no return
     }
 }
 
-function changePassword($username,$password){
+function changePassword($username,){
     $conn = dbconn();
     $sql = "select password from Users where username='$username'";
     $result = $conn->query($sql);
