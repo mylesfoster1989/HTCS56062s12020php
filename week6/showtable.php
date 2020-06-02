@@ -13,25 +13,26 @@
         <th>Name</th>
     </tr>
     <?php
-
     include_once "databaseconnection.php";
+    $records = showRecords();
+    //print_r($records);
 
-    $sql = "select * from Users"; // create query
-    $result = $connection->query($sql); //run the query on this connection
-
-    if ($result->num_rows > 0){ //check if there is record in the result
-        while ($row = $result->fetch_assoc()){ //show each associated row
-            echo "<tr>";
-            echo "<td>".$row['id']."</td>";
-            echo "<td>".$row['username']."</td>";
-            echo "<td>".$row['password']."</td>";
-            echo "<td>".$row['name']."</td>";
-            echo "</tr>";
-        }
-    }else{
-        echo "no result in the table";
+    $i = 0;
+    while ($i < sizeOf($records)) {
+        //print_r($records[$i]); //arrayname index is the value --. value
+        $record = $records[$i];
+        ?>
+        <tr>
+            <td><?php echo $record[0]; ?></td>
+            <td> <?php echo $record[1]; ?></td>
+            <td><?php echo $record[2]; ?></td>
+            <td><?php echo $record[3]; ?></td>
+        </tr>
+        <?php
+        $i = $i + 1;
     }
-    $connection->close();
+
+
     ?>
 </table>
 </body>
