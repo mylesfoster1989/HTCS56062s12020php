@@ -13,4 +13,3 @@ if ($result->num_rows > 0){ //check if there is record in the result
     echo "no result in the table";
 }
 $connection->close();
-
