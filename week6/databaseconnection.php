@@ -104,17 +104,22 @@ function changePassword($username, $oldPassword, $newPassword)
 }
 
 function showRecords(){
-    $conn = dbconn()
+    $conn = dbconn();
     $sql = "select * from Users"; // create query
     $result = $connection->query($sql); //run the query on this connection
+$records - array();
 
     if ($result->num_rows > 0){ //check if there is record in the result
         while ($row = $result->fetch_assoc()){ //show each associated row
             echo $row['id']." ".$row['username']." ".$row['password']." ".$row['name']."<br>"; // in each row, we have columns.
+        $records = array($row['id'], $row['username'], $row['password'], $row['name']);
+array_push(,$records,$record);
         }
+
     }else{
         echo "no result in the table";
     }
     $conn->close();
+    return $records;
 
 }
