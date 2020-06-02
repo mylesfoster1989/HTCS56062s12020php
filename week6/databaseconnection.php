@@ -71,6 +71,13 @@ function showProfile($username)
     }
 }
 
+/**
+ * @name changPassword
+ * @param $username
+ * @param $oldPassword
+ * @param $newPassword
+ * @return bool //changed or not
+ */
 function changePassword($username, $oldPassword, $newPassword)
 {
     $conn = dbconn();
@@ -94,4 +101,20 @@ function changePassword($username, $oldPassword, $newPassword)
         $conn->close();
         return false;
     }
+}
+
+function showRecords(){
+    $conn = dbconn()
+    $sql = "select * from Users"; // create query
+    $result = $connection->query($sql); //run the query on this connection
+
+    if ($result->num_rows > 0){ //check if there is record in the result
+        while ($row = $result->fetch_assoc()){ //show each associated row
+            echo $row['id']." ".$row['username']." ".$row['password']." ".$row['name']."<br>"; // in each row, we have columns.
+        }
+    }else{
+        echo "no result in the table";
+    }
+    $conn->close();
+
 }
