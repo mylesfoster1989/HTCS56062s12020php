@@ -81,6 +81,8 @@ function changePassword($username, $oldPassword, $newPassword)
             $oldPwdInDb = $row["password"];
         }
     }
+    echo $oldPwdInDb;
+    echo $oldPassword;
     if ($oldPassword == $oldPwdInDb) {
         $sql = "update Users set password = '";
         $sql .= $newPassword;
