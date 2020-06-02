@@ -54,7 +54,8 @@ function login($username, $password)
  * @name showprofile
  * @param $username
  */
-function showProfile($username){ //this fucntion has no return
+function showProfile($username)
+{ //this fucntion has no return
     $conn = dbconn();
     $sql = "select * from Users where username='$username'";
     $result = $conn->query($sql);
@@ -70,7 +71,8 @@ function showProfile($username){ //this fucntion has no return
     }
 }
 
-function changePassword($password){
+function changePassword($username, $oldPassword, $newPassword)
+{
     $conn = dbconn();
     $sql = "select password from Users where username='$username'";
     $result = $conn->query($sql);
@@ -79,19 +81,15 @@ function changePassword($password){
             $oldPwdInDb = $row["password"];
         }
     }
-}
-
-if (isset($_POST["oldpwd"])) { //isset check variable exist or not
-    if ($_POST["oldpwd"] == $oldPwdInDb) {
+    if ($oldPassword == $oldPwdInDb) {
         $sql = "update Users set password = '";
-        $sql .= $_POST["newpwd"];
-        $sql .= "'where username = '$username'";
-        $result = $connection->query($sql);
-        echo "password changed";
-    } else {
-        echo "go back, input again";
+        $sql .= $newPassword;
+        $sql .= "' where username = '$username'";
+        $conn->query($sql);
         $conn->close();
-
+        return true;
+    } else {
+        $conn->close();
+        return false;
     }
-
 }
