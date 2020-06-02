@@ -103,6 +103,9 @@ function changePassword($username, $oldPassword, $newPassword)
     }
 }
 
+/**
+ * @return array
+ */
 function showRecords()
 {
     $conn = dbconn();
