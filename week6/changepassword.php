@@ -5,6 +5,6 @@ session_start();  //either you use session or set session, you must have session
 $username = $_SESSION["username"]; //use session
 
 
-changePassword($username)
+changePassword($username);
 ?>
 <p><a href="logout.php">Logout</a></p>
