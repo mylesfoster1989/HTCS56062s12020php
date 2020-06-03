@@ -6,6 +6,7 @@
  * purpose fo user
  */
 
+include_once "DB.php"
 class User
 {
     //they ar emy attributes
@@ -63,4 +64,11 @@ class User
 
     //they are my methods
 
+    public function save(){
+        $dbObject = new DB();
+        $dbconn = $dbObject->connection;
+        $sql = "insert into Users values (null, $this->id, $this->useranme, $this->password,$this->name)"
+            $dbconn->query($sql);
+                echo "saved to datrabse";
+ }
 }
