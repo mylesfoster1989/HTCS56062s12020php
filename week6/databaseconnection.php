@@ -102,7 +102,7 @@ function changePassword($username, $oldPassword, $newPassword)
         return false;
     }
 }
-include_once "class/user.php";
+include_once "class/User.php";
 /**
  * @ show records
  * @return array //user array
