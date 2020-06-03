@@ -102,9 +102,10 @@ function changePassword($username, $oldPassword, $newPassword)
         return false;
     }
 }
-
+include_once "class/user.php";
 /**
- * @return array
+ * @ show records
+ * @return array //user array
  */
 function showRecords()
 {
@@ -116,7 +117,7 @@ function showRecords()
     if ($result->num_rows > 0) { //check if there is record in the result
         while ($row = $result->fetch_assoc()) { //show each associated row
             //echo $row['id'] . " " . $row['username'] . " " . $row['password'] . " " . $row['name'] . "<br>"; // in each row, we have columns.
-            $record = array($row['id'], $row['username'], $row['password'], $row['name']);
+            $record = new User($row['id'], $row['username'], $row['password'], $row['name']);
             array_push( $records, $record);
         }
 
