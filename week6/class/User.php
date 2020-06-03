@@ -1,16 +1,15 @@
 <?php
 /**
  * Class User
- * author myles foster
- * version 1.0
- * purpose fo user
+ * Author: Lei Song
+ * Version: 1.0
+ * Purpose: for User
  */
-
-include_once "DB.php"
+include_once "DB.php";
 class User
 {
-    //they ar emy attributes
-    public $id; //publIc friend protectr for a variable
+    // They are my attributes
+    public $id; //public friend private protect for a variable
     private $username;
     private $password;
     public $name;
@@ -62,13 +61,14 @@ class User
         $this->password = $password;
     }
 
-    //they are my methods
+    //They are my methods
 
     public function save(){
         $dbObject = new DB();
         $dbconn = $dbObject->connection;
-        $sql = "insert into Users values (null, $this->id, $this->useranme, $this->password,$this->name)"
-            $dbconn->query($sql);
-                echo "saved to datrabse";
- }
+        $sql = "insert into Users values (null, '$this->username', '$this->password', '$this->name')";
+        $dbconn->query($sql);
+        echo "saved to database";
+    }
+
 }

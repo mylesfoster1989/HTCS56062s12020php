@@ -1,6 +1,6 @@
 <?php
 /**
- * Author: Lei Song
+ * Author: myles foster
  * Date: 26 May 2020
  * Version: 1.0
  * Purpose: for login
