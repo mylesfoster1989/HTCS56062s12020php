@@ -8,6 +8,7 @@
 
 class User
 {
+    //they ar emy attributes
     public $id; //publIc friend protectr for a variable
     private $username;
     private $password;
@@ -28,5 +29,38 @@ class User
         $this->name = $name;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getUsername()
+    {
+        return $this->username; //this means his
+    }
+
+    /**
+     * @param mixed $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    //they are my methods
 
 }
