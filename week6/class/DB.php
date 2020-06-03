@@ -2,6 +2,7 @@
 <?php
 
 class DB
+class User
 {
     private $server = "dno6xji1n8fm828n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
     private $user = "frn8ql19w9jrd0hy";
@@ -19,4 +20,5 @@ class DB
             echo $this->connection->connect_error;
         }
     }
+
 }
