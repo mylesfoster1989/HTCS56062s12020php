@@ -2,7 +2,7 @@
 
 include_once "databaseconnection.php";
 $records = showRecords();
-print_r($records);
+//print_r($records);
 
 $i = 0;
     while ($i < sizeOf($records)){
