@@ -1,5 +1,5 @@
 <?php
-include_once "class/createUser.php";
+include_once "class/User.php";
 $username = $_POST['username'];
 $password = $_POST['pwd'];
 $name = $_POST['name'];
