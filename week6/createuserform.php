@@ -1,10 +1,6 @@
-<?php
-//whose password we change?
-?>
-
-<form action="changepassword.php" method="post">
-    <p>Old Password: <input type="password" name="oldpwd"></p>
-    <p>New Password: <input type="password" name="newpwd"></p>
-    <button>Change</button>
+<form action="createuser.php" method="post">
+    <p>username: <input type="text" name="username"></p>
+    <p>password: <input type="password" name="pwd"></p>
+    <p>name: <input type="text" name="name"></p>
+    <button>Add</button>
 </form>
-<p><a href="logout.php">Logout</a></p>
