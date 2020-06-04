@@ -2,7 +2,7 @@
 <?php
 
 class DB
-class User
+
 {
     private $server = "arfo8ynm6olw6vpn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
     private $user = "jo0xc9likdk5o0vx";
