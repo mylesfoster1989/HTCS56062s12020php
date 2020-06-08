@@ -28,7 +28,7 @@ include_once "header.php";
         </a></li>
         <li><a href="Reptile.html"><img src="image/reptile.png" height="188" width="268"/>
         </a></li>
-        <li><a href="SmallAnimal.html"><img src="image/small animals.jpg" height="174" width="290"/>
+        <li><a href="SmallAnimal.html"><img src="image/smallanimals.jpg" height="174" width="290"/>
         </a></li>
         <li><a href="Chicken.html"><img src="image/chicken.png" height="189" width="267"/>
         </a></li>
