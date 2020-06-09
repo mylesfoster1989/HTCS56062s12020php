@@ -22,10 +22,7 @@ function addToCart(e) {
     qty = $(e).prev().val();
 
     cart.append("<p>Name: "+name1+"  Price: "+Number(price)*Number(qty) +"</p>");
-    $
     total = total + Number(price)*Number(qty);
-
-
 }
 function invoice() {
 
@@ -49,12 +46,16 @@ function invoice() {
         }
     }
 
-
     //Take everything from shopping cart
     $("#invoicePlace").empty();
-    $("#invoicePlace").append($("#cartDiv").children());
-    $("#invoicePlace").append("<p>Total: "+total+"</p>");
+    i = 0;
+    while (i < $("#rightDiv").children().length){
+        // console.log($("#rightDiv").children()[i]);
+        $("#invoicePlace").append($("#rightDiv").children()[i]);
+        i=i+1;
+    }
 
+    $("#invoicePlace").append("<p>Total: "+total+"</p>");
 
 }
 
