@@ -17,12 +17,15 @@ function leftDividerAnimation() {
 //link the individual animal product and price whe clicking add to cart button
 function addToCart(e) {
     cart = $("#cartDiv");
-    name = e.name;
-    price = e.price;
-    qty = ???;
+    name1 = $(e).attr("name");
+    price = $(e).attr("price");
+    qty = $(e).prev().val();
+
+    cart.append("<p>Name: "+name1+"  Price: "+Number(price)*Number(qty) +"</p>");
 
 
-function addToInvoice() {
+
+    function addToInvoice() {
 
 }
 //show invoice page
