@@ -52,7 +52,7 @@ function invoice() {
 
     //Take everything from shopping cart
     $("#invoicePlace").empty();
-    $("#invoicePlace").append($("#rightDiv").children());
+    $("#invoicePlace").append($("#cartDiv").children());
     $("#invoicePlace").append("<p>Total: "+total+"</p>");
 
 
