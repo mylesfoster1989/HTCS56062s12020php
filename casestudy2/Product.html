@@ -13,153 +13,69 @@ include_once "header.php";
 ?>
 
 
-    <div align="right">
-        <td id="rightside">
-            <p>Cart:</p>
-            <div id="cartDiv"></div>
-            <button id="showInvoiceBut">Invoice</button>
-        </td>
-    </div>
+<div align="right">
+    <td id="rightside">
+        <p>Cart:</p>
+        <div id="cartDiv"></div>
+        <button id="showInvoiceBut">Invoice</button>
+    </td>
+</div>
+<?php
+            $categoryID = $_GET["categoryID"];
+            $products = $user->showProductsByCategory($categoryID);
+$i = 0;
+while ($i
+<sizeof
+($products)){
+$product = $products[$i];
+
+$i = $i + 1;
+}
+?>
 
 
 
-    <div class="product">
-        <img src="image/image/catffod.jpg" height="257" width="196"/>
-        <p>$3.30 ea</p>
-        <p>qty:<input class="qty" id="catQty" type="number">
-            <button class = "addBut" id="addCat" onclick="addToCart(this)">Add to Cart</button>
-        </p>
-    </div>
-
-    <div class="product">
-        <img src="image/image/birdfood.jpg" height="257" width="196"/>
-        <p>$2.30 ea</p>
-        <p>qty:<input class="qty" id="birdQty" type="number">
-            <button class = "addBut" id="addBird" onclick="addToCart(this)">Add to Cart</button>
-        </p>
-    </div>
-
-    <div class="product">
-        <img src="image/image/fishffod.jpg" height="159" width="159"/>
-        <p>$1.30 ea</p>
-        <p>qty:<input class="qty" id="fishQty" type="number">
-            <button class = "addBut" id="addFish" onclick="addToCart(this)">Add to Cart</button>
-        </p>
-    </div>
-
-    <div class="product">
-        <img src="image/image/download(6).jpg" height="225" width="225"/>
-        <p>$4.50 ea</p>
-        <p>qty:<input class="qty" id="dogQty" type="number">
-            <button class = "addBut" id="addDog" onclick="addToCart(this)" price="4.50">Add to Cart</button>
-        </p>
-    </div>
-
-    <div class="product">
-
-        <img src="image/image/download(4).jpg" height="225" width="225"/>
-        <p>$4.30 ea</p>
-        <p>qty:<input class="qty" id="dog2Qty" type="number">
-            <button class = "addBut" id="addDog2" onclick="addToCart(this)" price="4.30">Add to Cart</button>
-        </p>
-    </div>
-
-
-      <div class="product">
-
-
-        <img src="image/image/download(1).jpg" height="276" width="183"/>
-        <p>$8.30 ea</p>
-        <p>qty:<input class="qty" id="dog3Qty" type="number">
-            <button class = "addBut" id="addDog3" onclick="addToCart(this)" price="8.30">Add to Cart</button>
-        </p>
-    </div>
-
-
-    <div class="product">
-
-
-        <img src="image/image/download(2).jpg" height="224" width="224"/>
-        <p>$7.55 ea</p>
-        <p>qty:<input class="qty" id="dog4Qty" type="number">
-            <button class = "addBut" id="addDog4" onclick="addToCart(this)" price="7.55">Add to Cart</button>
-        </p>
-    </div>
-
-
-    <div class="product">
-
-
-        <img src="image/image/download(3).jpg" height="225" width="225"/>
-        <p>$3.55 ea</p>
-        <p>qty:<input class="qty" id="dog5Qty" type="number">
-            <button class = "addBut" id="addDog5" onclick="addToCart(this)" price="3.55">Add to Cart</button>
-        </p>
-    </div>
-
-
-    <div class="product">
-
-
-        <img src="image/image/download(5).jpg" height="225" width="225"/>
-        <p>$3.30 ea</p>
-        <p>qty:<input class="qty" id="dog6Qty" type="number">
-            <button class = "addBut" id="addDog6" onclick="addToCart(this)" price="3.30">Add to Cart</button>
-        </p>
-    </div>
-
-
-    <div class="product">
-    <img src="image/image/images2/reptile/rep.jpg" height="298" width="169"/>
-    <p>$3.33 ea</p>
-    <p>qty:<input class="qty" id="repQty" type="number">
-        <button class = "addBut" id="addRep" onclick="addToCart(this)" price="3.33">Add to Cart</button>
+<div class="product">
+    <img src="image/image/catffod.jpg" height="257" width="196"/>
+    <p>price: <?php echo $product->price;?</p>
+    <p>qty:<input class="qty" id="catQty" type="number">
+        <button class="addBut" id="addCat" onclick="addToCart(this)">Add to Cart</button>
     </p>
 </div>
 
-    <div class="product">
 
-        <img src="image/image/images2/Chookie/chcicken1.jpg" height="196" width="196"/>
-        <p>$3.20 ea</p>
-        <p>qty:<input class="qty" id="chickenQty" type="number">
-            <button class = "addBut" id="addChicken" onclick="addToCart(this)" price="3.20">Add to Cart</button>
-        </p>
+<div id="navigation"> <!-- nav i will create my menu here-->
+    <ul> <!--use to create menu-->
+        <li><a href="Dog.html">
+            <img src="image/dog.jpg"/>
+        </a></li>
+        <li><a href="Cat.html"><img src="image/cat.jpg"/>
+        </a></li>
+        <li><a href="Fish.html"><img src="image/fish.png"/>
+        </a></li>
+        <li><a href="Reptile.html"><img src="image/reptile.png"/>
+        </a></li>
+        <li><a href="SmallAnimal.html"><img src="image/smallanimals.jpg"/>
+        </a></li>
+        <li><a href="Chicken.html"><img src="image/chicken.png"/>
+        </a></li>
+        <li><a href="Bird.html"><img src="image/bird.png"/>
+        </a></li>
+    </ul>
+
+</div>
+
+
+<!-- The Voice Page -->
+<div id="voicePage" class="voice">
+
+    <!-- Modal content -->
+    <div id="voice-content">
+        <span class="close">&times;</span>
+        <p>Please check your invoice</p>
     </div>
 
-
-
-    <div id="navigation"> <!-- nav i will create my menu here-->
-            <ul> <!--use to create menu-->
-                <li><a  href="Dog.html">
-                    <img src="image/dog.jpg"/>
-                </a></li>
-                <li><a href="Cat.html"><img src="image/cat.jpg"/>
-                </a></li>
-                <li><a href="Fish.html"><img src="image/fish.png"/>
-                </a></li>
-                <li><a href="Reptile.html"><img src="image/reptile.png"/>
-                </a></li>
-                <li><a href="SmallAnimal.html"><img src="image/smallanimals.jpg"/>
-                </a></li>
-                <li><a href="Chicken.html"><img src="image/chicken.png"/>
-                </a></li>
-                <li><a href="Bird.html"><img src="image/bird.png"/>
-                </a></li>
-            </ul>
-
-    </div>
-
-
-            <!-- The Voice Page -->
-            <div id="voicePage" class="voice">
-
-                <!-- Modal content -->
-                <div id="voice-content">
-                    <span class="close">&times;</span>
-                    <p>Please check your invoice</p>
-                </div>
-
-            </div>
+</div>
 
 
 <?php
@@ -167,7 +83,6 @@ include_once "footer.php";
 ?>
 
 </body>
-
 
 
 </html>

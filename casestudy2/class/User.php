@@ -53,6 +53,12 @@ class User
         return $categories;
     }
 
+
+    /**
+     * @name showProductByCategory
+     * @param $categoryID
+     * @return product array
+     */
     public function  showProductByCategory($categoryID){
         $conn = (new DB())->connection;
         $sql = "select * from Product where categoryID=".$categoryID; //. MEANS MERGE TWO STRING
@@ -60,7 +66,7 @@ class User
         $result = $conn->query($sql);
         if ($result->num_rows>0){
             while ($row = $result->fetch_assoc()){
-                $product = new Product($row["id"], $row["name"], $row["price"], $row["description"],$row["categoryID"]);
+                $product = new Product($row["id"], $row["name"], $row ["imageName"],$row["picture"], $row["price"], $row["description"],$row["categoryID"]);
                 array_push( $products,$product);
             }
         }
