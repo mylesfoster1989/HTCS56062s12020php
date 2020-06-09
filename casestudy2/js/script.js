@@ -50,7 +50,7 @@ function invoice() {
     $("#invoicePlace").empty();
     i = 0;
     while (i < $("#cartDiv").children().length){
-        // console.log($("#rightDiv").children()[i]);
+        // console.log($("#cartDiv").children()[i]);
         $("#invoicePlace").append($("#cartDiv").children()[i]);
         i=i+1;
     }
