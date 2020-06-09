@@ -22,17 +22,17 @@ include_once "header.php";
 </div>
 <?php
 $categoryID = $_GET["categoryID"];
-$products = $user->showProductsByCategory($categoryID);
+$products = $user->showProductByCategory($categoryID);
 $i = 0;
 while ($i < sizeof($products)){
 $product = $products[$i];
 ?>
 
 <div class="product">
-    <img src="image/<?php echo $product->picture" height="257" width="196"/>
+    <img src="<?php echo $product->imageName;?>" height="257" width="196"/>
     <p>price: <?php echo $product->price;?></p>
     <p>qty:<input class="qty" id="catQty" type="number">
-        <button class="<?php echo $product->name" id="addCat" onclick="addToCart(this)">Add to Cart</button>
+        <button class="<?php echo $product->name;?>" id="addCat" onclick="addToCart(this)">Add to Cart</button>
     </p>
 </div>
 

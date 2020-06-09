@@ -40,12 +40,12 @@ class User
     public function viewCategories()
     {
         $conn = (new DB())->connection; //creat connetcuion from db class
-        $sql = "select * from Categroy"; // my query
+        $sql = "select * from category"; // my query
         $categories = array(); //my category is an array
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                $category = new Category($row["id"], $row["name"], $row["picture"]);//each row in table
+                $category = new Category($row["id"], $row["name"], $row["imageName"]);//each row in table
                 array_push($categories, $category); //push category to catergory array
             }
         }
@@ -66,7 +66,7 @@ class User
         $result = $conn->query($sql);
         if ($result->num_rows>0){
             while ($row = $result->fetch_assoc()){
-                $product = new Product($row["id"], $row["name"], $row ["imageName"],$row["picture"], $row["price"], $row["description"],$row["categoryID"]);
+                $product = new Product($row["id"], $row["Name"], $row ["imageName"],$row["price"], $row["categoryID"]);
                 array_push( $products,$product);
             }
         }

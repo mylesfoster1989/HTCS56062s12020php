@@ -10,9 +10,8 @@
 class Product
 {
     Public $id;
-    public $name;
+    public $Name;
     public $imageName;
-    public $picture;
     public $price;
     public $categoryID;
 
@@ -21,16 +20,14 @@ class Product
      * @param $id
      * @param $name
      * @param $imageName
-     * @param $picture
      * @param $price
      * @param $categoryID
      */
-    public function __construct($id, $name, $imageName, $picture, $price, $categoryID)
+    public function __construct($id, $Name, $imageName, $price, $categoryID)
     {
         $this->id = $id;
-        $this->name = $name;
+        $this->Name = $Name;
         $this->imageName = $imageName;
-        $this->picture = $picture;
         $this->price = $price;
         $this->categoryID = $categoryID;
     }
