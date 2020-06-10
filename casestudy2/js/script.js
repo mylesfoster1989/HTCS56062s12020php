@@ -13,7 +13,7 @@ function leftDividerAnimation() {
 }
 //Logo animation end
 
-
+total=0
 //link the individual animal product and price whe clicking add to cart button
 function addToCart(e) {
     cart = $("#cartDiv");
@@ -26,7 +26,7 @@ function addToCart(e) {
 }
 function invoice() {
 
-    modal = document.getElementById("myModal");
+    modal = document.getElementById("voicePage");
     modal.style.display = "block";
 
     // Get the <span> element that closes the modal
