@@ -48,13 +48,7 @@ function invoice() {
 
     //Take everything from shopping cart
     $("#invoicePlace").empty();
-    i = 0;
-    while (i < $("#cartDiv").children().length){
-        // console.log($("#cartDiv").children()[i]);
-        $("#invoicePlace").append($("#cartDiv").children()[i]);
-        i=i+1;
-    }
-
+    $("#invoicePlace").append($("#cartDiv").children());
     $("#invoicePlace").append("<p>Total: "+total+"</p>");
 
 }

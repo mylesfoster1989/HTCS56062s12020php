@@ -81,6 +81,7 @@ $product = $products[$i];
         <div id="voice-content">
             <span class="close">&times;</span>
             <p>Please check your invoice</p>
+            <div id="invoicePlace"></div>
         </div>
 
     </div>
