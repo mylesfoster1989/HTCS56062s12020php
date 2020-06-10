@@ -12,7 +12,7 @@
 
 
 </head>
-<body onload="leftDividerAnimation(), invoice()">
+<body onload="leftDividerAnimation()">
 
 <?php
 include_once "header.php";
@@ -23,7 +23,7 @@ include_once "header.php";
     <td id="rightside">
         <p>Cart:</p>
         <div id="cartDiv"></div>
-        <button id="showInvoiceBut">Invoice</button>
+        <button id="showInvoiceBut" onclick="invoice()">Invoice</button>
     </td>
 </div>
 <?php
