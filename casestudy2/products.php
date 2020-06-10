@@ -39,8 +39,8 @@ $product = $products[$i];
     <p>price: <?php echo $product->price;?></p>
     <p>
        <input placeholder="qty" id="catQty" type="number">
-        <button name="<?php echo $product->name;?>
-        price = <?php echo $product->price; ?>
+        <button name="<?php echo $product->name;?>"
+        price = "<?php echo $product->price; ?>"
                 onclick="addToCart(this)">Add to Cart</button>
     </p>
 </div>
